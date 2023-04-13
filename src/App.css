@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-text-color {
+  color: #fafafc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.description-text-color {
+  color: #8c8c8e;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.info-bar-bg {
+  background: #20202a;
 }
 
-.App-link {
-  color: #61dafb;
+.info-card-color {
+  background: linear-gradient(
+    159deg,
+    rgba(37, 37, 50, 0.98) 0%,
+    rgba(35, 35, 45, 0.98) 100%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-bg-background {
+  background: #191923;
+}
+
+.divider-color {
+  background: #646466;
+}
+
+.progress-bar-active {
+  background: #ffc107;
+}
+
+.bannerContainer {
+  position: relative;
+}
+
+.expContainer {
+  width: 700px;
+}
+
+.marginLeft30 {
+  margin-left: 1.85rem;
+}
+
+.bannerContainer::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  background-image: url("./assets/images/bg-1.jpg");
+  opacity: 0.6;
+  background-size: cover;
+  background-position: center;
 }
