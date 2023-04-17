@@ -6,7 +6,7 @@ import { workExpData } from "../../data";
 
 export default function Experience() {
   return (
-    <div className="py-8 md:py-4">
+    <div className="py-8 md:py-8">
       <h4 className="header-text-color font-semibold text-lg mb-3">
         My Work Experience
       </h4>
