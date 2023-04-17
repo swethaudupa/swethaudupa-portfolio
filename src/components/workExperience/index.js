@@ -21,13 +21,17 @@ export default function Experience() {
               <div className="md:w-2/5">
                 <div className="flex justify-center md:justify-start">
                   <span className="shrink-0 description-text-color mt-1 text-center header-text-color font-semibold">
-                    <a href={val.companyLink} target="_blank">
+                    <a
+                      className="flex flex-col justify-center items-center"
+                      href={val.companyLink}
+                      target="_blank"
+                    >
                       <img
                         src={val.companyLogo}
                         className="h-24 w-24 mb-1 object-contain"
                         alt="company logo"
                       />
-                      {val.name}
+                      <span className="block w-32">{val.name}</span>
                     </a>
                   </span>
                   <div className="relative ml-3 hidden w-full md:block">

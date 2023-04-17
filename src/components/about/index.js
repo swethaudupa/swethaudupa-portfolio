@@ -16,15 +16,25 @@ export default function About() {
       </h4>
       <div className="p-4" style={styles.descriptionContainer}>
         <div className="description-text-color text-sm">
-          An experienced software developer with over 8 years of experience in
-          web and mobile application development. Proven track record of
-          delivering high-quality, user-centric solutions to clients. Technical
-          expertise combined with an above-average understanding of design and
-          attention to detail allows for creating products that not only
-          function well but also look great. Passionate about work and always
-          striving to stay ahead of the latest industry trends and technologies.
-          A professional who is committed to delivering results that exceed
-          expectations
+          Born and raised in Bangalore, a full-stack web developer with over 8
+          years of experience in web and mobile application development.
+          <br />
+          <br />
+          My career began in a non-technical role, but I quickly transitioned to
+          a technical position after being given the opportunity to build a
+          website using any technology of my choice at the start of my career.
+          This experience sparked my interest in the web technologies, including
+          Angular, ReactJS, Ionic, and React native, among others.
+          <br />
+          <br />
+          I thrive in fast-paced, challenging environments and have honed my
+          skills through self-directed learning and on-the-job experience. My
+          attention to detail and design sensibility allow me to produce
+          pixel-perfect applications.
+          <br />
+          <br />
+          When I'm not coding, I enjoy learning about history and space,
+          traveling, cooking, and playing PC/mobile games.
         </div>
       </div>
     </>
