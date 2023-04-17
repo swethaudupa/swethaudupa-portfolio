@@ -11,7 +11,7 @@ import "../../App.css";
 
 export default function InfoBar({ show, setter }) {
   const className =
-    "info-bar-bg overflow-auto h-screen w-[350px] transition-[margin-left] ease-in-out duration-500 fixed md:static top-0 bottom-0 left-0 z-40";
+    "info-bar-bg overflow-auto h-screen md:w-[350px] transition-[margin-left] ease-in-out duration-500 fixed md:static top-0 bottom-0 left-0 z-40 xs:w-4/5";
   const appendClass = show ? " ml-0" : " ml-[-400px] md:ml-0";
 
   const ModalOverlay = () => (
@@ -73,26 +73,6 @@ export default function InfoBar({ show, setter }) {
 
           <div className="h-px opacity-30 divider-color ml-7 mr-7"></div>
 
-          <div className="flex items-center justify-evenly pt-7 pb-3 mb-3">
-            {langSkillsData?.map((val, index) => {
-              return (
-                <div key={index} className="flex-col">
-                  <CircularProgress
-                    size={55}
-                    strokeWidth={3}
-                    percentage={val.percentage}
-                    color="#FFC107"
-                  />
-                  <div className="header-text-color font-semibold text-sm mt-4 pl-1">
-                    {val.language}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="h-px opacity-30 divider-color ml-7 mr-7"></div>
-
           <div className="px-4 my-6 mx-3">
             {hardSkillsData?.map((val, index) => {
               return (
@@ -110,6 +90,26 @@ export default function InfoBar({ show, setter }) {
                       className="progress-bar-active h-1 rounded-full"
                       style={{ width: `${val.percentage}` }}
                     ></div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="h-px opacity-30 divider-color ml-7 mr-7"></div>
+
+          <div className="flex items-center justify-evenly pt-7 pb-3 mb-3">
+            {langSkillsData?.map((val, index) => {
+              return (
+                <div key={index} className="flex-col">
+                  <CircularProgress
+                    size={55}
+                    strokeWidth={3}
+                    percentage={val.percentage}
+                    color="#FFC107"
+                  />
+                  <div className="header-text-color font-semibold text-sm mt-4 pl-1">
+                    {val.language}
                   </div>
                 </div>
               );

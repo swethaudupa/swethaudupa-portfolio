@@ -45,17 +45,17 @@ export default function Experience() {
 
                   <div className="mt-12 flex">
                     <div className="md:-mt-1 md:pl-32 expContainer">
-                      <span className="block font-body font-normal header-text-color">
+                      <span className="block font-body font-normal header-text-color xs:text-left">
                         {val.date}
                       </span>
-                      <span className="block pt-2 font-header text-xl font-bold uppercase header-text-color">
+                      <span className="block pt-2 font-header text-xl font-bold uppercase header-text-color xs:text-left">
                         {val.designation}
                       </span>
                       <div className="pt-2">
                         {val.experience?.map((exp, index) => {
                           return (
                             <ul key={index} class="list-disc">
-                              <li className="block pt-4 pb-1 font-body font-bold description-text-color">
+                              <li className="block pt-4 pb-1 font-body font-bold description-text-color xs:text-left">
                                 {exp.projectName}
                               </li>
                               {exp.description?.map((exp, index) => {

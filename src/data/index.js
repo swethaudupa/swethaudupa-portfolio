@@ -98,24 +98,14 @@ export const workExpData = [
   },
   {
     date: "2010-2011",
-    designation: "frontend engineer",
+    designation: "Programmer Analyst",
     companyLogo: CTS_logo,
     companyLink: "https://www.cognizant.com/in/en",
     name: "Cognizant",
     experience: [
       {
-        projectName: "Dineout",
-        description: [
-          "Collaborated across verticals of the company to maintain a good track record of deliverables.",
-          "Managed a team of 5 frontend developers for the D App project",
-        ],
-      },
-      {
-        projectName: "Flujo Dashboard",
-        description: [
-          "Collaborated across verticals of the company to maintain a good track record of deliverables.",
-          "Managed a team of 5 frontend developers for the D App project",
-        ],
+        projectName: "",
+        description: ["Worked on a Software testing tool called Load runner"],
       },
     ],
   },
