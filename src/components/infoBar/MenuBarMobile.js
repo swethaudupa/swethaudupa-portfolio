@@ -3,7 +3,7 @@ import "../../App.css";
 
 export default function MenuBarMobile({ setter }) {
   return (
-    <nav className="md:hidden z-20 fixed top-0 left-0 right-0 md:p-5 main-bg-background flex [&>*]:my-auto px-6 py-8">
+    <nav className="md:hidden z-20 fixed top-0 left-0 right-0 md:p-5 main-bg-background flex [&>*]:my-auto px-6 py-8 hamburgerMenuContainer">
       <button
         className="text-4xl flex header-text-color"
         onClick={() => {
