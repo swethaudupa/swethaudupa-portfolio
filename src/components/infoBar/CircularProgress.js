@@ -21,7 +21,7 @@ const CircularProgress = ({
     <svg width={size} height={size} style={customStyle} viewBox={viewBox}>
       <circle
         fill="none"
-        stroke="#ccc"
+        stroke="#191923"
         cx={size / 2}
         cy={size / 2}
         r={radius}
