@@ -40,7 +40,7 @@ export default function InfoBar({ show, setter }) {
       <div className={`${className}${appendClass}`}>
         <div className="sticky top-0 p-2 flex flex-col items-center content-center p-7 info-card-color">
           <img
-            className="w-24 h-24 rounded-full object-cover"
+            className="w-24 h-24 rounded-full object-cover hover:scale-125 transition-all duration-500 cursor-pointer"
             src={profile_pic}
             alt="avatar"
           />
