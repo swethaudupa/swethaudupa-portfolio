@@ -110,7 +110,7 @@ export default function InfoBar({ show, setter }) {
             <a
               className="description-text-color uppercase text-xs font-bold"
               href={
-                "https://drive.google.com/file/d/1Mi47BOPbRf76ROLrHYDqFHxo7jjTDkci/view?usp=sharing"
+                "https://drive.google.com/file/d/1A3k6CrcGitdlcK53dTWNdos7shdJXaHu/view?usp=sharing"
               }
               target="_blank"
               rel="noreferrer"
