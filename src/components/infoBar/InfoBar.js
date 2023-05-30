@@ -112,7 +112,7 @@ export default function InfoBar({ show, setter }) {
               href={"swetha_udupa.pdf"}
               target="_blank"
               rel="noreferrer"
-              download={"swetha-cv"}
+              download={"%PUBLIC_URL%/swetha-udupa.pdf"}
             >
               <button className="flex items-center">
                 Download CV
