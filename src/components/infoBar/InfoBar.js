@@ -23,6 +23,21 @@ export default function InfoBar({ show, setter }) {
     />
   );
 
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch("swetha_udupa.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "swetha_udupa.pdf";
+        alink.click();
+      });
+    });
+  };
+
   return (
     <>
       <div className={`${className}${appendClass}`}>
@@ -107,22 +122,13 @@ export default function InfoBar({ show, setter }) {
           <div className="h-px opacity-30 divider-color ml-7 mr-7"></div>
 
           <div className="py-4 pl-8">
-            <a
-              className="description-text-color uppercase text-xs font-bold"
-              href={"swetha_udupa.pdf"}
-              target="_blank"
-              rel="noreferrer"
-              download={"%PUBLIC_URL%/swetha-udupa.pdf"}
+            <button
+              onClick={onButtonClick}
+              className="flex items-center description-text-color uppercase text-xs font-bold"
             >
-              <button className="flex items-center">
-                Download CV
-                <FaFileDownload
-                  color="#8c8c8e"
-                  size={"0.8em"}
-                  className="ml-2"
-                />
-              </button>
-            </a>
+              Download CV
+              <FaFileDownload color="#8c8c8e" size={"0.8em"} className="ml-2" />
+            </button>
           </div>
 
           <div className="p-5 info-card-color flex items-center sticky bottom-0 justify-evenly">
