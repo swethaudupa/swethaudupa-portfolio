@@ -24,18 +24,31 @@ export default function InfoBar({ show, setter }) {
   );
 
   const onButtonClick = () => {
+    const link = document.createElement("a");
+    link.href = "swetha_udupa.pdf";
+    link.setAttribute("download", `swetha-udupa.pdf`);
+
+    // Append to html link element page
+    document.body.appendChild(link);
+
+    // Start download
+    link.click();
+
+    // Clean up and remove the link
+    link.parentNode.removeChild(link);
+
     // using Java Script method to get PDF file
-    fetch("swetha_udupa.pdf").then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "swetha_udupa.pdf";
-        alink.click();
-      });
-    });
+    // fetch("swetha_udupa.pdf").then((response) => {
+    //   response.blob().then((blob) => {
+    //     // Creating new object of PDF file
+    //     const fileURL = window.URL.createObjectURL(blob);
+    //     // Setting various property values
+    //     let alink = document.createElement("a");
+    //     alink.href = fileURL;
+    //     alink.download = "swetha_udupa.pdf";
+    //     alink.click();
+    //   });
+    // });
   };
 
   return (
