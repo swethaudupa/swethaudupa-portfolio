@@ -23,34 +23,6 @@ export default function InfoBar({ show, setter }) {
     />
   );
 
-  const onButtonClick = () => {
-    const link = document.createElement("a");
-    link.href = "swetha_udupa.pdf";
-    link.setAttribute("download", `swetha-udupa.pdf`);
-
-    // Append to html link element page
-    document.body.appendChild(link);
-
-    // Start download
-    link.click();
-
-    // Clean up and remove the link
-    link.parentNode.removeChild(link);
-
-    // using Java Script method to get PDF file
-    // fetch("swetha_udupa.pdf").then((response) => {
-    //   response.blob().then((blob) => {
-    //     // Creating new object of PDF file
-    //     const fileURL = window.URL.createObjectURL(blob);
-    //     // Setting various property values
-    //     let alink = document.createElement("a");
-    //     alink.href = fileURL;
-    //     alink.download = "swetha_udupa.pdf";
-    //     alink.click();
-    //   });
-    // });
-  };
-
   return (
     <>
       <div className={`${className}${appendClass}`}>
@@ -135,13 +107,24 @@ export default function InfoBar({ show, setter }) {
           <div className="h-px opacity-30 divider-color ml-7 mr-7"></div>
 
           <div className="py-4 pl-8">
-            <button
-              onClick={onButtonClick}
-              className="flex items-center description-text-color uppercase text-xs font-bold"
+            <a
+              className="description-text-color uppercase text-xs font-bold"
+              href={
+                "https://drive.google.com/file/d/1Mi47BOPbRf76ROLrHYDqFHxo7jjTDkci/view?usp=sharing"
+              }
+              target="_blank"
+              rel="noreferrer"
+              download={"swetha-udupa.pdf"}
             >
-              Download CV
-              <FaFileDownload color="#8c8c8e" size={"0.8em"} className="ml-2" />
-            </button>
+              <button className="flex items-center">
+                Download CV
+                <FaFileDownload
+                  color="#8c8c8e"
+                  size={"0.8em"}
+                  className="ml-2"
+                />
+              </button>
+            </a>
           </div>
 
           <div className="p-5 info-card-color flex items-center sticky bottom-0 justify-evenly">
