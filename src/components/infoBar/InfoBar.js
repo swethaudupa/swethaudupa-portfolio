@@ -6,6 +6,7 @@ import CircularProgress from "./CircularProgress";
 import { FaFileDownload, FaLinkedin, FaGithub, FaGoogle } from "react-icons/fa";
 
 import { infoTableData, langSkillsData, hardSkillsData } from "../../data";
+import CV from "../../data/swetha_udupa.pdf";
 
 import "../../App.css";
 
@@ -22,18 +23,6 @@ export default function InfoBar({ show, setter }) {
       }}
     />
   );
-
-  const onButtonClick = () => {
-    fetch("swetha_resume.pdf").then((response) => {
-      response.blob().then((blob) => {
-        const fileURL = window.URL.createObjectURL(blob);
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "swetha_resume.pdf";
-        alink.click();
-      });
-    });
-  };
 
   return (
     <>
@@ -118,23 +107,38 @@ export default function InfoBar({ show, setter }) {
 
           <div className="h-px opacity-30 divider-color ml-7 mr-7"></div>
 
-          <div className="flex items-center py-4 pl-8">
-            <button className="flex" onClick={onButtonClick}>
-              <span className="description-text-color uppercase text-xs font-bold">
-                Download CV
-              </span>
+          <div className="py-4 pl-8">
+            <a
+              className="description-text-color flex items-center uppercase text-xs font-bold"
+              href={CV}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download CV
               <FaFileDownload color="#8c8c8e" size={"0.8em"} className="ml-2" />
-            </button>
+            </a>
           </div>
 
           <div className="p-5 info-card-color flex items-center sticky bottom-0 justify-evenly">
-            <a href="https://www.linkedin.com/in/swetharanig/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/swetharanig/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <FaLinkedin color="#8c8c8e" size={"0.8em"} />
             </a>
-            <a href="https://github.com/swethaudupa" target="_blank">
+            <a
+              href="https://github.com/swethaudupa"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaGithub color="#8c8c8e" size={"0.8em"} />
             </a>
-            <a href="mailto:swethaudupag@gmail.com" target="_blank">
+            <a
+              href="mailto:swethaudupag@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaGoogle color="#8c8c8e" size={"0.8em"} />
             </a>
           </div>

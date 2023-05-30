@@ -25,6 +25,7 @@ export default function Experience() {
                       className="flex flex-col justify-center items-center"
                       href={val.companyLink}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <img
                         src={val.companyLogo}
