@@ -109,13 +109,20 @@ export default function InfoBar({ show, setter }) {
 
           <div className="py-4 pl-8">
             <a
-              className="description-text-color flex items-center uppercase text-xs font-bold"
+              className="description-text-color uppercase text-xs font-bold"
               href={CV}
               target="_blank"
               rel="noreferrer"
+              download={"swetha-cv"}
             >
-              Download CV
-              <FaFileDownload color="#8c8c8e" size={"0.8em"} className="ml-2" />
+              <button className="flex items-center">
+                Download CV
+                <FaFileDownload
+                  color="#8c8c8e"
+                  size={"0.8em"}
+                  className="ml-2"
+                />
+              </button>
             </a>
           </div>
 
