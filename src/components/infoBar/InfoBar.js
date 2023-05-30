@@ -6,7 +6,6 @@ import CircularProgress from "./CircularProgress";
 import { FaFileDownload, FaLinkedin, FaGithub, FaGoogle } from "react-icons/fa";
 
 import { infoTableData, langSkillsData, hardSkillsData } from "../../data";
-import CV from "../../data/swetha_udupa.pdf";
 
 import "../../App.css";
 
@@ -110,7 +109,7 @@ export default function InfoBar({ show, setter }) {
           <div className="py-4 pl-8">
             <a
               className="description-text-color uppercase text-xs font-bold"
-              href={CV}
+              href={"swetha_udupa.pdf"}
               target="_blank"
               rel="noreferrer"
               download={"swetha-cv"}
